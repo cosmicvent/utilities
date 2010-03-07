@@ -1,0 +1,5 @@
+Cosmicvent Utilities
+--------------------
+This project has a lot of utilities which can be used in your software projects. Following are the utilities available in this repository:
+
+	- SettingsService, this is a neat little service which helps you manage the settings for your site. It reloads the service information whenever the settings file changes.
