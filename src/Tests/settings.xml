@@ -1,0 +1,5 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<settings>
+  <setting name="smtp_server" value="cosmicvent.com" />
+  <setting name="smtp_port" value="25" />
+</settings>
