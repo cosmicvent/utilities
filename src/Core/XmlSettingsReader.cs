@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Xml.Linq;
+using System.Xml;
+using System.Threading;
 
 namespace Cosmicvent.Utilities {
     public class XmlSettingsReader : ISettingsReader {
@@ -38,10 +40,14 @@ namespace Cosmicvent.Utilities {
 
 
         public IDictionary<string, string> Read() {
-            //BUG: This throws an exception when the file is locked by another process
-            XDocument document = XDocument.Load(_filename);
+            XDocument document;
+            using (var fileStream = new FileStream(_filename, FileMode.Open, FileAccess.Read, FileShare.ReadWrite))
+            using (var reader = new StreamReader(fileStream)) {
+                Thread.Sleep(1000);//sleep for a second to get the data //Note: This has been added to fix a bug about
+                document = XDocument.Load(reader);
+            }
 
-            if (document.Root == null) {
+            if (document == null || document.Root == null) {
                 throw new FormatException(string.Format("The {0} file is not in the right format", _filename));
             }
 
