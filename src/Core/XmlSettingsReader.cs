@@ -38,7 +38,7 @@ namespace Cosmicvent.Utilities {
 
 
         public IDictionary<string, string> Read() {
-
+            //BUG: This throws an exception when the file is locked by another process
             XDocument document = XDocument.Load(_filename);
 
             if (document.Root == null) {
