@@ -14,6 +14,9 @@ namespace Cosmicvent.Utilities {
         }
 
         public XmlSettingsReader(string filename) {
+            if (!File.Exists(filename)) {
+                throw new FileNotFoundException(string.Format("Unable to find the xml file {0}", filename));
+            }
             _filename = filename;
             SetFileSystemWatcher();
         }

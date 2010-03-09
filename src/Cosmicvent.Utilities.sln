@@ -5,6 +5,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Core", "Core\Core.csproj", 
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tests", "Tests\Tests.csproj", "{0D21E8D0-C20E-40CE-A596-A726AEBB8414}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Samples", "Samples", "{7FFCF28D-21BD-4E80-8C17-59F23D0C8F82}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SettingsServiceSample", "SettingsServiceSample\SettingsServiceSample.csproj", "{8EF638E3-A846-4A20-AAC3-2B1117A11651}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -19,8 +23,15 @@ Global
 		{0D21E8D0-C20E-40CE-A596-A726AEBB8414}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0D21E8D0-C20E-40CE-A596-A726AEBB8414}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0D21E8D0-C20E-40CE-A596-A726AEBB8414}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8EF638E3-A846-4A20-AAC3-2B1117A11651}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8EF638E3-A846-4A20-AAC3-2B1117A11651}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8EF638E3-A846-4A20-AAC3-2B1117A11651}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8EF638E3-A846-4A20-AAC3-2B1117A11651}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{8EF638E3-A846-4A20-AAC3-2B1117A11651} = {7FFCF28D-21BD-4E80-8C17-59F23D0C8F82}
 	EndGlobalSection
 EndGlobal

@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<settings>
+  <setting name="welcome_message" value="Welcome to the Settings Service page" />
+  <setting name="version" value="1.0.2.1" />
+  <setting name="last_publish_date" value="05/02/2010" />
+</settings>

@@ -48,7 +48,7 @@ namespace Cosmicvent.Utilities.Tests {
             _reader.DataChanged += () => triggered = true;
 
             File.SetLastWriteTime("settings.xml", DateTime.Now.AddHours(1));
-            System.Threading.Thread.Sleep(50);//need to do this so that the app doesn't close before the event is raised
+            System.Threading.Thread.Sleep(100);//need to do this so that the app doesn't close before the event is raised
             Assert.True(triggered);
         }
     }
